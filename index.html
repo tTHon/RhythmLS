@@ -21,26 +21,72 @@
 .san {font-family: 'Poppins', sans-serif;}
 .red {color: #c00202}
 .button {
-    border: #eec8ee solid 0.1vmax;
+    border: #eec8ee solid 0.1vmax; border-bottom: none;
     border-top-left-radius: 1vmax; 
     border-top-right-radius: 1vmax;
     background-color: transparent;color: black;
     text-decoration: none;
     padding: 0.8vmax;
-    display: inline;
+    font-size: 2.2vmax;
+   }
+
+.dD {
+    display: block; padding: 0.4vmax;
+    text-decoration: none;
+    padding: 0.8vmax;
+    font-size: 2.2vmax;
 }
-.button:hover {
-    background-color: #d2bc79;
+
+.button:hover, .w3-dropdown-hover:hover, .dD:hover {
+    background-color: #f1f1f1;
 }
+
+
+.topBar {
+    font-size: 1.5vmax;
+}
+@media only screen and (max-width: 992px){
+    .topBar {font-size: 2.2vmax}
+}
+
+/*slideshow*/
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.container {
+  position: relative;
+  height: 70vh;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+
+
 </style>
 
 <body>
-<div class="w3-content w3-right w3-padding" style="font-size: 1.5vmax">
-    <a href=""><i class="fab fa-facebook-f" style="color: #3B5998"></i></a>
-    <a href=""><i class="far fa-envelope" style="color: #f0a6f0"></i></a>
+<div class="w3-content w3-right" style="padding: 1vmax" >
+    <a href=""><i class="fab fa-facebook-f topBar" style="color: #3B5998;"></i></a>&thinsp;
+    <a href=""><i class="far fa-envelope topBar" style="color: #f0a6f0;"></i></a>
 </div>
 <div class="w3-container w3-center" style="padding-top: 2vh" >
-    <img src="logo.png" style="width: 9%">
+    <img src="logo.png" style="width: 10vmax">
 </div>
 <div class="w3-container w3-center red header2" style="padding-top: 1vh; font-size: 4vmax">
     NAPP PHARM
@@ -48,20 +94,60 @@
 <div class="w3-container w3-center cursive" style="color: black; font-size: 2vmax; line-height: 70%">
     Innovate for delicate people
 </div>
-<div class="w3-center w3-bar w3-mobile" style="margin-top: 10vh; border-bottom: 0.1vmax solid #eec8ee;
-    padding-top: 1vmax">
-    <div>
-        <a href="" class="button san" style="font-size: 2vmax;">Products</a>
-        <a href="" class="button san" style="font-size: 2vmax;">About us</a>
-        <a href="" class="button san" style="font-size: 2vmax">Contact</a>
-        <a href="" class="button san" style="font-size: 2vmax">Products</a>
+<div class="w3-container w3-center w3-mobile" style="margin-top: 10vh; padding-bottom: 0.7vmax;
+border-bottom: 0.1vmax solid #eec8ee;">
+        <div class="w3-dropdown-hover" style="background-color: transparent;">
+        <span class="san button" >Products</span>
+            <div class="w3-bar-block w3-dropdown-content w3-card-4" style="margin-top: 0.7vmax;border: #eec8ee solid 0.1vmax">
+                <a href="" class="san w3-bar-item dD" style="border-bottom: #eec8ee solid 0.1vmax">
+                    Smooth Peel</a>
+                <a href="" class="san w3-bar-item dD">Rixi</a>
+            </div>
+        </div>
+        <a href="" class="w3-bar-item san button" >About us</a>
+        <a href="" class="w3-bar-item san button" >Contact</a>
+        
     </div>
-</div>
-<div class="container gradient" style="height: 100vh">
 
-</div>
+<div class="container gradient">
+    <div class="mySlides">
+        <img src="media/tomato.png" style="width: 100%">
+        </div>
+            
+    <div class="mySlides">
+        <img src="media/MARSI.png" style="width: 100%">
+        </div>
+
+     <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        </div>
+    </div>
+
+
     
+<script>
 
+var slideIndex = 1;
+showSlides(slideIndex);
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  
+  slides[slideIndex-1].style.display = "block";
+  
+}
+</script>
     
             
        
