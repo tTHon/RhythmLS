@@ -15,7 +15,7 @@
 <link href="/static/fontawesome/fontawesome-all.css" rel="stylesheet">
 
 <style>
-.gradient {background: linear-gradient(to bottom, #ffffff 0%, #eec8ee 100%);}
+.gradient {background: linear-gradient(to bottom, #ffffff 0%, #f9e1d6 100%);}
 .header {font-family: 'Enriqueta', serif;}
 .cursive {font-family: 'Courgette', cursive;}
 .san {font-family: 'Poppins', sans-serif;}
@@ -72,6 +72,13 @@
   display: none;
 }
 
+.iWidth {
+    width: 70%;
+}
+@media only screen and (max-width: 992px){
+    .iWidth {width: 100%}
+}
+
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
@@ -90,6 +97,34 @@
   to {opacity: 1}
 }
 
+.moreBtn1 {
+    font-size: 2vmax;
+    margin-bottom: 4vmax;
+}
+
+@media only screen and (max-width: 600px){
+    .moreBtn1 {
+    font-size: 1.5vmax;
+    margin-bottom: 1vmax;}
+}
+
+.moreBtn2{
+    font-size: 1.8vmax; color: #f1f1f1;
+    margin-bottom: 1.5vmax; margin-right: 17%;
+}
+
+@media only screen and (max-width: 992px){
+    .moreBtn2 {
+    font-size: 1.5vmax;
+    margin-bottom: 1vmax; margin-right: 1vmax;}
+}
+
+@media only screen and (max-width: 600px){
+    .moreBtn2 {
+    font-size: 1vmax;
+    margin-bottom: 0.5vmax; margin-right: 0.5vmax;}
+}
+
 
 
 
@@ -98,7 +133,7 @@
 <body>
 <div class="w3-content w3-right" style="padding: 1vmax" >
     <a href=""><i class="fab fa-facebook-f topBar" style="color: #3B5998;"></i></a>&thinsp;
-    <a href=""><i class="far fa-envelope topBar" style="color: #f0a6f0;"></i></a>
+    <a href="mailto:NappPharm@outlook.com"><i class="far fa-envelope topBar" style="color: #f0a6f0;"></i></a>
 </div>
 <div class="w3-container w3-center" style="padding-top: 2vh" >
     <img src="logo.png" style="width: 10vmax">
@@ -125,16 +160,30 @@ border-bottom: 0.1vmax solid #d3bf7e;">
     </div>
 
 <div class="container w3-center">
-    <div class="mySlides fade" >
-        <img src="media/Slide SmoothPeel/Slide2.PNG" style="width: 70%;" class="w3-card-4">
+    <div class="mySlides fade w3-display-container">
+        <a href="">
+        <img src="media/tomato.png" class="w3-card-4 iWidth">
+        <div class="w3-display-bottommiddle san moreBtn1 w3-btn w3-round-large w3-padding-small w3-border">
+            Learn more about Smooth Peel
+        </div></a>
     </div>
     
-    <div class="mySlides fade" >
-        <img src="media/Slide SmoothPeel/Slide3.PNG" style="width: 70%" class="w3-card-4">
+    <div class="mySlides fade w3-display-container" >
+        <a href="">
+        <img src="media/MARSI.png" class="w3-card-4 iWidth">
+        <div class="w3-display-bottomright san moreBtn2 w3-btn w3-round-large w3-padding-small w3-border">
+            click for more
+        </div></a>
         </div>
-    <div class="mySlides fade" >
-        <img src="media/Slide SmoothPeel/Slide4.PNG" style="width: 70%" class="w3-card-4">
+        
+    <div class="mySlides fade w3-display-container" >
+        <a href="">
+        <img src="media/box.png" class="w3-card-4 iWidth">
+        <div class="w3-display-bottommiddle san moreBtn2 w3-btn w3-round-large w3-padding-small w3-border">
+                click for more
             </div>
+        </a>        
+    </div>
      <!-- The dots/circles -->
     <div style="text-align:center;padding: 0.1vmax">
         <span class="dot" onclick="currentSlide(1)"></span> 
