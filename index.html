@@ -168,14 +168,7 @@ border-bottom: 0.1vmax solid #d3bf7e;">
         </div></a>
     </div>
     
-    <div class="mySlides fade w3-display-container" >
-        <a href="">
-        <img src="media/MARSI.png" class="w3-card-4 iWidth">
-        <div class="w3-display-bottomright san moreBtn2 w3-btn w3-round-large w3-padding-small w3-border">
-            click for more
-        </div></a>
-        </div>
-        
+         
     <div class="mySlides fade w3-display-container" >
         <a href="">
         <img src="media/box.png" class="w3-card-4 iWidth">
@@ -188,8 +181,7 @@ border-bottom: 0.1vmax solid #d3bf7e;">
     <div style="text-align:center;padding: 0.1vmax">
         <span class="dot" onclick="currentSlide(1)"></span> 
         <span class="dot" onclick="currentSlide(2)"></span> 
-        <span class="dot" onclick="currentSlide(3)"></span> 
-       
+        
         </div>
     </div>
 
@@ -201,8 +193,9 @@ var slideIndex = 1; var myTime;
 showSlides(slideIndex);
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
-  clearTimeout(myTime);
+    clearTimeout(myTime);
+    showSlides(slideIndex = n);
+  
 }
 
 function showSlides(n) {
