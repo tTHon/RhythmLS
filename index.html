@@ -34,18 +34,13 @@
    }
 
 /*smoothPeel folder*/
-.spTab {
-    background: #faeae2;
-    border-top-right-radius: 1vmax;
-    box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-}
-.spTab:hover, .spTabActive {font-weight: 900}
 .sp {
-    display: none; vertical-align: middle;
+    vertical-align: middle;display: table-cell;
 }
 
-.spFolder {height: 90vh;width: 100%;box-shadow: 2px -2px 5px 0 rgba(0, 0, 0, 0.2);display: table}
+.spFolder {height: 90vh;width: 100%;
+box-shadow: 2px -3px 8px 0 rgba(88, 85, 102, 0.2);border-top-right-radius: 3vmax;
+display: table; margin-top: 10vmax}
 
 
 .dD {
@@ -154,7 +149,7 @@
     bottom: 1vmax;right: 1vmax;
     cursor: pointer;
     display: none;
-    z-index: 1; opacity: 1;
+    z-index: 2; opacity: 1;
    }
 .toTop :hover {opacity: 0.8}
 
@@ -169,7 +164,7 @@
 @media only screen and (max-width: 600px) {
     .noMobile {display: none}
     .mobileOnly {display: block}
-    .spFolder {height: 75vh}      
+    .spFolder {height: 75vh} 
 }
 
 
@@ -241,36 +236,28 @@ border-bottom: 0.1vmax solid #d3bf7e;">
     </div>
 
 <!--SmoothPeel-->
-<div id="smoothPeel">
-    <div class="w3-bar serif noMobile" style="font-size: 2vmax; margin-top: 10vmax;">
-        <div class="w3-bar-item spTab" onclick="toggle('sp',1)">
-            <span class="serif">Smooth </span><span class="cursive">Peel</span>
-        </div>
-        <div class="w3-bar-item spTab" onclick="toggle('sp',2)">Why SmoothPeel?</div>
-        <div class="w3-bar-item spTab">Ingredient</div>
-        <div class="w3-bar-item spTab">How to use</div>
-    </div>
-    <div class="w3-bar-block serif mobileOnly" style="font-size: 2vmax; margin-top: 5vmax;">
-        <div class="w3-bar-item spTab"><span class="serif">Smooth </span><span class="cursive">Peel</span></div>
-        <div class="w3-bar-item spTab">Why SmoothPeel?</div>
-        <div class="w3-bar-item spTab">Ingredient</div>
-        <div class="w3-bar-item spTab">How to use</div>
-    </div></div>
-    <div class="w3-container pink spFolder">
-        <!--home tab-->
-        <div class="sp w3-center" style="display: table-cell">
+<div id="smoothPeel" class="w3-container pink spFolder">
+        <!--home-->
+        <div class="sp w3-center">
             <img src="media/smoothpeel.png" class="iWidth30">
             <div class="w3-padding serif darkGTxt" style="font-size: 3vmax; font-style: bold;" >
                 Adhesive Bandage Remover <span class="noMobile">|</span> 
                 <span class="Thai w3-mobile" style="font-size: 2vmax; font-style: normal">น้ำยาช่วยละลายกาวบนพลาสเตอร์ปิดแผล</span>
             </div>
         </div>
-        <!--Why tab-->
-        <div class="sp">
-            <img src="media/MARSI.png" style="width: 50vw">
+</div>
+        <!--Why-->
+        <div class="w3-container">
+            <div class="w3-col s6 san w3-center" style="margin-top: 10vmax;padding: 2vmax">
+                <span style="font-size: 6vmax">
+                    7 out of 10 </span><br>
+                <span style="font-size: 3vmax">patients suffer from</span><br>
+                <span style="font-weight: 700; font-size: 3vmax">medical-adhesive removal skin injury</span><br>
+                <span style="font-size: 3vmax">or MARSI</span>
+            </div>
         </div>
 
-    </div>
+    
 
 
     
@@ -304,20 +291,6 @@ function showSlides(n) {
   var plusSlide = slideIndex+1;
   myTime = setTimeout(function(){ showSlides(slideIndex = plusSlide) },3500);
  }
-
-function toggle(c,n) {
-    var classN = document.getElementsByClassName(c);
-    var t=c+'Tab';
-    var tab = document.getElementsByClassName(t);
-    var i;
-    for (i=0;i<classN.length;i++) {
-        classN[i].style.display = "none";
-        tab[i].className = tab[i].className.replace(" spTabActive", "");
-    }
-    classN[n-1].style.display = "table-cell";
-    tab[n-1].className += " spTabActive";
-    classN[n-1].scrollIntoView ({behavior:"smooth"})
-}
 
 function scroll() {
     topArr = document.getElementsByClassName("toTop");
