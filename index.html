@@ -11,7 +11,7 @@
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Enriqueta:700|Courgette|Poppins|Taviraj" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Enriqueta:700|Courgette|Poppins|Taviraj|EB+Garamond" rel="stylesheet">
 <link href="/static/fontawesome/fontawesome-all.css" rel="stylesheet">
 
 <style>
@@ -19,8 +19,9 @@
 .header {font-family: 'Enriqueta', serif;}
 .cursive {font-family: 'Courgette', cursive;}
 .san {font-family: 'Poppins', sans-serif;}
+.serif {font-family: 'EB Garamond', serif;}
 .Thai {font-family: 'Taviraj', serif;}
-.red {color: #c00202}
+
 .button {
     border: #d3bf7e solid 0.1vmax; border-bottom: none;
     border-top-left-radius: 1vmax; 
@@ -30,6 +31,16 @@
     padding: 0.8vmax;
     font-size: 2.2vmax;
    }
+.spTab {
+    background-color: #faeae2;
+    box-shadow: 0px 3px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.spTab:hover {font-weight: 900}
+.sp {
+    display: none; vertical-align: middle;text-align: center;
+}
+
 
 .dD {
     display: block; padding: 0.4vmax;
@@ -125,6 +136,17 @@
     margin-bottom: 0.5vmax; margin-right: 0.5vmax;}
 }
 
+/*color*/
+.pink {background-color: #f9e1d6}
+
+/*mobile*/
+.mobileOnly {display: none}
+
+@media only screen and (max-width: 600px) {
+    .noMobile {display: none}
+    .mobileOnly {display: block}
+   
+}
 
 
 
@@ -185,9 +207,33 @@ border-bottom: 0.1vmax solid #d3bf7e;">
         </div>
     </div>
 
-<div class="w3-container san" id="smoothPeel" style="font-size: 2.5vmax; margin-top: 5vmax">
-    What is SmoothPeel?
-</div>
+<!--SmoothPeel-->
+    <div class="w3-bar serif noMobile" style="font-size: 2vmax; margin-top: 5vmax;">
+        <div class="w3-bar-item spTab" onclick="toggle('sp',1)">
+            <span class="serif">Smooth </span><span class="cursive">Peel</span>
+        </div>
+        <div class="w3-bar-item spTab" onclick="toggle('sp',2)">Why SmoothPeel?</div>
+        <div class="w3-bar-item spTab">Ingredient</div>
+        <div class="w3-bar-item spTab">How to use</div>
+    </div>
+    <div class="w3-bar-block serif mobileOnly" style="font-size: 2vmax; margin-top: 5vmax;">
+        <div class="w3-bar-item spTab"><span class="serif">Smooth </span><span class="cursive">Peel</span></div>
+        <div class="w3-bar-item spTab">Why SmoothPeel?</div>
+        <div class="w3-bar-item spTab">Ingredient</div>
+        <div class="w3-bar-item spTab">How to use</div>
+    </div>
+    <div class="w3-container pink" 
+    style="height: 90vh;width: 100%;box-shadow: 3px -3px 8px 0 rgba(0, 0, 0, 0.2);display: table">
+        <!--home tab-->
+        <div class="sp" style="display: table-cell">
+            <img src="media/smoothpeel.png" style="width: 30vw;">
+        </div>
+        <!--Why tab-->
+        <div class="sp">
+            <img src="media/MARSI.png" style="width: 50vw">
+        </div>
+
+    </div>
 
 
     
@@ -221,6 +267,16 @@ function showSlides(n) {
   var plusSlide = slideIndex+1;
   myTime = setTimeout(function(){ showSlides(slideIndex = plusSlide) },3500);
  }
+
+function toggle(c,n) {
+    var className = document.getElementsByClassName(c);
+    var i;
+    for (i=0;i<className.length;i++) {
+        className[i].style.display = "none";
+    }
+    className[n-1].style.display = "table-cell";
+    className[n-1].scrollIntoView ({behavior:"smooth"})
+}
 
 
 </script>
