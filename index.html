@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Enriqueta:700|Courgette|Poppins|Trirong|EB+Garamond" rel="stylesheet">
 <link href="/static/fontawesome/fontawesome-all.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
 
 <style>
 .gradient {background: linear-gradient(to bottom, #ffffff 0%, #f9e1d6 100%);}
@@ -31,15 +32,20 @@
     padding: 0.8vmax;
     font-size: 2.2vmax;
    }
+
+/*smoothPeel folder*/
 .spTab {
-    background-color: #faeae2;
-    box-shadow: 0px 3px 8px 0 rgba(0, 0, 0, 0.2);
+    background: #faeae2;
+    border-top-right-radius: 1vmax;
+    box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
-.spTab:hover {font-weight: 900}
+.spTab:hover, .spTabActive {font-weight: 900}
 .sp {
     display: none; vertical-align: middle;
 }
+
+.spFolder {height: 90vh;width: 100%;box-shadow: 2px -2px 5px 0 rgba(0, 0, 0, 0.2);display: table}
 
 
 .dD {
@@ -86,8 +92,14 @@
 .iWidth {
     width: 70%;
 }
+
+.iWidth30 {width: 30vw}
 @media only screen and (max-width: 992px){
     .iWidth {width: 100%}
+    .iWidth30 {width: 50%}
+}
+@media only screen and (max-width: 600px){
+    .iWidth30 {width: 70%}
 }
 
 /* Fading animation */
@@ -136,6 +148,17 @@
     margin-bottom: 0.5vmax; margin-right: 0.5vmax;}
 }
 
+.toTop {
+    position: fixed; 
+    background-color: transparent; color: #f4f1ec;
+    bottom: 1vmax;right: 1vmax;
+    cursor: pointer;
+    display: none;
+    z-index: 1; opacity: 1;
+   }
+.toTop :hover {opacity: 0.8}
+
+
 /*color*/
 .pink {background-color: #f9e1d6}
 .darkGTxt {color: #585566}
@@ -146,8 +169,10 @@
 @media only screen and (max-width: 600px) {
     .noMobile {display: none}
     .mobileOnly {display: block}
-   
+    .spFolder {height: 75vh}      
 }
+
+
 
 
 
@@ -182,9 +207,16 @@ border-bottom: 0.1vmax solid #d3bf7e;">
         
     </div>
 
+    <!--toTop arrow-->
+    <div>
+        <a href="#top" title="to the top" class="toTop">
+            <i class="fas fa-arrow-circle-up" style="font-size: 2.8vmax"></i>
+        </a>
+    </div>
+
 <div class="container w3-center">
     <div class="mySlides fade w3-display-container">
-        <a href="">
+        <a href="#smoothPeel">
         <img src="media/tomato.png" class="w3-card-4 iWidth">
         <div class="w3-display-bottommiddle san moreBtn1 w3-btn w3-round-large w3-padding-small w3-border">
             Learn more about Smooth Peel
@@ -193,7 +225,7 @@ border-bottom: 0.1vmax solid #d3bf7e;">
     
          
     <div class="mySlides fade w3-display-container" >
-        <a href="">
+        <a href="#smoothPeel">
         <img src="media/box.png" class="w3-card-4 iWidth">
         <div class="w3-display-bottommiddle san moreBtn2 w3-btn w3-round-large w3-padding-small w3-border">
                 click for more
@@ -209,7 +241,8 @@ border-bottom: 0.1vmax solid #d3bf7e;">
     </div>
 
 <!--SmoothPeel-->
-    <div class="w3-bar serif noMobile" style="font-size: 2vmax; margin-top: 5vmax;">
+<div id="smoothPeel">
+    <div class="w3-bar serif noMobile" style="font-size: 2vmax; margin-top: 10vmax;">
         <div class="w3-bar-item spTab" onclick="toggle('sp',1)">
             <span class="serif">Smooth </span><span class="cursive">Peel</span>
         </div>
@@ -222,15 +255,14 @@ border-bottom: 0.1vmax solid #d3bf7e;">
         <div class="w3-bar-item spTab">Why SmoothPeel?</div>
         <div class="w3-bar-item spTab">Ingredient</div>
         <div class="w3-bar-item spTab">How to use</div>
-    </div>
-    <div class="w3-container pink" 
-    style="height: 90vh;width: 100%;box-shadow: 3px -3px 8px 0 rgba(0, 0, 0, 0.2);display: table">
+    </div></div>
+    <div class="w3-container pink spFolder">
         <!--home tab-->
         <div class="sp w3-center" style="display: table-cell">
-            <img src="media/smoothpeel.png" style="width: 30vw;">
+            <img src="media/smoothpeel.png" class="iWidth30">
             <div class="w3-padding serif darkGTxt" style="font-size: 3vmax; font-style: bold;" >
-                Adhesive Bandage Remover | 
-                <span class="Thai" style="font-size: 2vmax; font-style: normal">น้ำยาช่วยละลายกาวบนพลาสเตอร์ปิดแผล</span>
+                Adhesive Bandage Remover <span class="noMobile">|</span> 
+                <span class="Thai w3-mobile" style="font-size: 2vmax; font-style: normal">น้ำยาช่วยละลายกาวบนพลาสเตอร์ปิดแผล</span>
             </div>
         </div>
         <!--Why tab-->
@@ -243,7 +275,7 @@ border-bottom: 0.1vmax solid #d3bf7e;">
 
     
 <script>
-
+window.onscroll = function() {scroll()};
 var slideIndex = 1; var myTime;
 showSlides(slideIndex);
 
@@ -274,13 +306,27 @@ function showSlides(n) {
  }
 
 function toggle(c,n) {
-    var className = document.getElementsByClassName(c);
+    var classN = document.getElementsByClassName(c);
+    var t=c+'Tab';
+    var tab = document.getElementsByClassName(t);
     var i;
-    for (i=0;i<className.length;i++) {
-        className[i].style.display = "none";
+    for (i=0;i<classN.length;i++) {
+        classN[i].style.display = "none";
+        tab[i].className = tab[i].className.replace(" spTabActive", "");
     }
-    className[n-1].style.display = "table-cell";
-    className[n-1].scrollIntoView ({behavior:"smooth"})
+    classN[n-1].style.display = "table-cell";
+    tab[n-1].className += " spTabActive";
+    classN[n-1].scrollIntoView ({behavior:"smooth"})
+}
+
+function scroll() {
+    topArr = document.getElementsByClassName("toTop");
+    
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+        topArr[0].style.display="inline"}
+       
+    else {
+        topArr[0].style.display="none"}
 }
 
 
