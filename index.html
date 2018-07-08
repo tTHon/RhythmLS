@@ -17,7 +17,6 @@
 
 <style>
 .gradient {background: linear-gradient(to bottom, #ffffff 0%, #f9e1d6 100%);}
-.header {font-family: 'Enriqueta', serif;}
 .cursive {font-family: 'Courgette', cursive;}
 .san {font-family: 'Poppins', sans-serif;}
 .serif {font-family: 'EB Garamond', serif;}
@@ -162,12 +161,19 @@ display: table; margin-top: 10vmax}
     .MarsiTable td:first-of-type {width: 25%}
         }
 
+/*SP features*/
+.spFont {font-family: 'EB Garamond', serif; font-size: 3vmax}
+.spFont::after {font-family: 'Courgette', cursive; content: " Peel  "; font-size: 3vmax}
+
+
 
 /*color*/
 .pink {background-color: #f9e1d6}
 .pink2 {background-color: #fae7de}
 .pink3 {background-color: #fcf0ea}
+.pink4 {background-color: #fdf6f2}
 .darkGTxt {color: #585566}
+.gradient {background: linear-gradient(to bottom right, #d7c894 0%, #d55d76 50%, #E8B6E8 100%)}
 
 /*mobile*/
 .mobileOnly {display: none}
@@ -192,7 +198,7 @@ display: table; margin-top: 10vmax}
 <div class="w3-container w3-center" style="padding-top: 2vh" >
     <img src="logo.png" style="width: 10vmax">
 </div>
-<div class="w3-container w3-center red header2" style="padding-top: 1vh; font-size: 4vmax">
+<div class="w3-container w3-center red san" style="padding-top: 1vh; font-size: 4vmax">
     NAPP PHARM
 </div>
 <div class="w3-container w3-center cursive" style="color: black; font-size: 2vmax; line-height: 70%">
@@ -208,8 +214,8 @@ border-bottom: 0.1vmax solid #d3bf7e;">
                 <a href="" class="san w3-bar-item dD">Rixi</a>
             </div>
         </div>
-        <a href="" class="w3-bar-item san button" >About us</a>
-        <a href="" class="w3-bar-item san button" >Contact</a>
+        <a href="#aboutUs" class="w3-bar-item san button" >About us</a>
+        <a href="#contactUs" class="w3-bar-item san button" >Contact</a>
         
     </div>
 
@@ -257,7 +263,7 @@ border-bottom: 0.1vmax solid #d3bf7e;">
             </div>
         </div>
 </div>
-        <!--Why-->
+        <!--MARSI-->
         <div class="w3-container w3-center serif pink3 darkGTxt" style="line-height: 5vmax; padding: 5vmax">
             
                 <span style="font-size: 8vmax">
@@ -305,7 +311,51 @@ border-bottom: 0.1vmax solid #d3bf7e;">
             </div>
         </div>
 
-    
+        <!--what is SP-->
+        <div class="w3-row-cell pink4" style="padding: 3vmax">
+            <div class="w3-cell w3-container w3-cell-middle w3-center">
+            <img src="media/bottle.png" style="width: 100%"></div>
+            <div class="w3-cell w3-container w3-cell-middle darkGTxt san" 
+            style="font-size: 2.5vmax; padding: 1vmax">
+                <div class="w3-row w3-padding">
+                <span class="spFont">Smooth</span>
+                dissolves the adhesives and ease the removal of the bandage. 
+                </div>
+                <div class="w3-row w3-padding">
+                    <span class="spFont">Smooth</span>
+                reduces irritation and pain from adhesive bandage removal. </div>
+                <div class="w3-row w3-padding">
+                    <span class="spFont">Smooth</span>
+                contains all-organic and non-toxic ingredients. </div>
+                <div class="w3-row w3-padding">
+                    <span class="spFont">Smooth</span>
+                is gentle to the skin and kids-friendly.</div>
+            </div>
+        </div>
+
+
+<!--about us-->
+<div id="aboutUs" class="w3-container header gradient" 
+style="font-size: 4vmax; margin-top: 10vmax; padding: 0.3vmax">
+    <div class="w3-container w3-white">
+    About Us</div>
+</div>
+
+
+<!--contact us-->
+<div id="contactUs" class="w3-container header gradient" 
+style="font-size: 4vmax; margin-top: 10vmax; padding: 0.3vmax">
+    <div class="w3-container w3-white">
+        Contact Us</div>
+</div>
+
+
+<!--end-->
+<div class="w3-container w3-center darkGTxt" style="margin-top: 5vmax; border-top: #f1f1f1 0.1vmax solid; padding: 1vmax">
+    <span class="san" style="font-size: 1.2vmax">made it happen by</span>
+    <span class="san" style="font-size: 1.5vmax; font-style: italic">t'</span> 
+    <span class="san" style="font-size: 1.5vmax;font-style: normal">Thon</span>
+</div>
 
 
     
