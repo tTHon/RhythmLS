@@ -30,21 +30,22 @@
     }
 .button:hover, .button:active {font-weight: 900;background-color: #f1f1f1}
 .activeMenu {background-color:#d3bf7e; font-weight: 900}
-@media only screen and (max-width: 390px){
-       .menuBar {font-size: 0}  
+@media only screen and (max-width: 420px){
+       .menuBar {font-size: 0vmax}  
        .button {padding-left: 0.3vmax; padding-right: 0.3vmax; font-size: 1.9vmax}
+       .button:hover, .button:active {font-weight: 700}
         }
 
 /*to Top arrow*/
 .toTop {
     position: fixed; 
-    background-color: transparent; color: #f4f1ec;
+    background-color: transparent; color: #ece5cd;
     bottom: 1vmax;right: 1vmax;
     cursor: pointer;
     display: none;
-    z-index: 2; opacity: 1;
+    z-index: 2; opacity: 0.8;
     }
-.toTop :hover {opacity: 0.8}
+.toTop :hover {text-shadow: rgba(165,160,143, 0.3) 0vmin 0.2vmin 0.2vmin}
 
 /*color*/
 .pink {background-color: #f9e1d6}
