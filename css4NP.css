@@ -1,0 +1,55 @@
+/*mobile*/
+.mobileOnly {display: none}
+
+@media only screen and (max-width: 600px) {
+    .noMobile {display: none}
+    .mobileOnly {display: block}
+}
+
+/*text*/
+.cursive {font-family: 'Courgette', cursive;}
+.san {font-family: 'Poppins', sans-serif;}
+.serif {font-family: 'EB Garamond', serif;}
+.Thai {font-family: 'Trirong', serif;}
+
+/*main menu*/
+.topBar, .topBar i {background-color: transparent; font-size: 2vmax;text-decoration: none}
+
+.menuBar {
+    margin-top: 10vh;
+    border-bottom: 0.1vmax solid #d3bf7e;font-size: 0.1vmax;
+   }
+   
+.button {
+    border: #d3bf7e solid 0.1vmax; border-bottom: none;
+    border-top-left-radius: 1vmax; 
+    border-top-right-radius: 1vmax;
+    background-color: transparent;color: black;
+    text-decoration: none;padding: 0.4vmax 0.8vmax 0 0.8vmax;
+    font-size: 2.2vmax;
+    }
+.button:hover, .button:active {font-weight: 900;background-color: #f1f1f1}
+.activeMenu {background-color:#d3bf7e; font-weight: 900}
+@media only screen and (max-width: 600px){
+       .menuBar {font-size: 0}  
+       .button {padding-left: 0.3vmax; padding-right: 0.3vmax; font-size: 2.1vmax}
+        }
+
+/*to Top arrow*/
+.toTop {
+    position: fixed; 
+    background-color: transparent; color: #f4f1ec;
+    bottom: 1vmax;right: 1vmax;
+    cursor: pointer;
+    display: none;
+    z-index: 2; opacity: 1;
+    }
+.toTop :hover {opacity: 0.8}
+
+/*color*/
+.pink {background-color: #f9e1d6}
+.pink2 {background-color: #fae7de}
+.pink3 {background-color: #fcf0ea}
+.pink4 {background-color: #fdf6f2}
+.darkGTxt {color: #585566}
+.gradient {background: linear-gradient(to bottom right, #d7c894 0%, #d55d76 50%, #E8B6E8 100%)}
