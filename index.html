@@ -92,6 +92,13 @@
     font-size: 1vmax;
     margin-bottom: 0.5vmax; margin-right: 0.5vmax;}
 }
+
+.aboutUsPadding {padding:0 0 0 1vmax;}
+@media only screen and (max-width: 600px){
+    .aboutUsPadding {padding: 1vmax 0 0 0}
+}
+
+
 </style>
 
 
@@ -155,23 +162,46 @@
     </div>
 
 <!--about us-->
-<div id="aboutUs" class="w3-container san gradient" 
-style="font-size: 2vmax; margin-top: 10vmax; padding: 0.2vmax">
-    <div class="w3-container w3-white">
-    About Us</div>
+<div id="aboutUs" class="w3-container" style="margin-top: 10vmax;">
+    <div class="w3-cell w3-container w3-cell-middle san w3-mobile">
+        <div class="w3-white w3-center" style="font-size: 5vmax; padding: 3vmax;">About Us</div>
+    </div>
+    <div class="w3-cell w3-container san gradient w3-mobile aboutUsPadding" style="font-size: 2.2vmax;">
+        <div class="w3-white" style="padding: 3vmax">        
+        <span style="font-size: 3vmax;">NAPP PHARM<sup>&reg;</sup> </span>
+        was founded in 2017 by a pharmacist whose aim is to create medical products
+        that are gentle and delicate enough for all kind of patients and economical enough
+        for everyone to afford. <br><br>
+        <span style="font-size: 3vmax">NAPP PHARM<sup>&reg;</sup> </span>
+        is based in Thailand, where most of our resources are located.
+        And that is the main reason we can control our quality and cost of our products.</div>
+    </div>
 </div>
 
 
 <!--contact us-->
-<div id="contactUs" class="w3-container san gradient" 
-style="font-size: 2vmax; margin-top: 10vmax; padding: 0.5vmax">
-    <div class="w3-container w3-white">
-        Contact Us</div>
+<div id="contactUs" class="w3-cell-row w3-center" style="margin-top: 10vmax;
+background-color: #f1f1f1; padding: 10vmax 2vmax 10vmax 2vmax">
+    <div class="w3-col s4 w3-padding w3-center w3-mobile">
+        <img src="logo.png" style="width: 100%">
+    </div>
+    <div class="w3-col s8 san w3-mobile" style="font-size: 2vmax;
+        text-align: left; padding: 3vmax">
+        <span style="font-size: 3vmax;">NAPP PHARM<sup>&reg;</sup> </span>  <br>
+        <i class="fas fa-phone"></i> 999-9999<br>
+        <a href="mailto:NappPharm@outlook.com" style="text-decoration: none"><i class="far fa-envelope"></i> 
+        NappPharm@outlook.com</a> <br>
+        <a href="" style="text-decoration: none;"><i class="fab fa-facebook-f" style="color: #3B5998;"></i>
+        &nbsp;NappPharm</a><br>
+        <a href="https://m.me/heartrhythmbox" style="text-decoration: none">
+        <i class="fab fa-facebook-messenger" style="color: #3B5998;"></i>
+        Message us</a>    
+    </div>
 </div>
 
 
 <!--end-->
-<div class="w3-container w3-center darkGTxt" style="margin-top: 5vmax; border-top: #f1f1f1 0.1vmax solid; padding: 1vmax">
+<div class="w3-container w3-center darkGTxt" style="border-top: #f1f1f1 0.1vmax solid; padding: 1vmax">
     <span class="san" style="font-size: 1.2vmax">made it happen by</span>
     <span class="san" style="font-size: 1.5vmax;font-style: italic">t'</span> 
     <span class="san" style="font-size: 1.5vmax;font-style: normal">Thon</span>
