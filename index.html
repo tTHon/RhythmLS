@@ -10,53 +10,52 @@
 <meta charset="UTF-8">
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href="https://fonts.googleapis.com/css?family=Courgette|Poppins|Prompt|EB+Garamond" rel="stylesheet">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+<link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 <style>
 .Thai {font-family: 'Prompt', sans-serif;}
-
+.menuItem {cursor: pointer;}
+.pink {background-color: #FFB4AB}
 </style>
 
 
 <body>
-<div style="background: radial-gradient(#a7eae3,#74DDD3,#78DeD4);height: 100vh">
-<div id="toPad" >
-<div class="w3-center" id="paddable">
-    <img src="media/Rixi/RixiWhiteNoSteroid.png" style="width:40%;opacity:0.98">
+
+
+<div style="background: radial-gradient(#74DDD3,#78DeD4);height: 100vh">
+<!--menu-->
+<div id="menu" class="w3-bar w3-top">
+    <div class="w3-bar-item menuItem" style="margin-right: 0;padding-right: 0">
+    <i class="fas fa-bars fa-lg" style="color:#555;vertical-align: middle;"></i></div>
+    <div class="w3-bar-item menuItem">
+    <img src="media/Rixi/rixiGrey.png" style="width: 5vh">
 </div>
-<div class="w3-row w3-center Thai" style="font-size: 2vmax;color:#fcfeff">
-    <img src="media/Rixi/line.png" style="width: 50%"><br>
+<br><br>
+
+
+<div id="toPad" class="w3-center" style="padding-top: 3vh;">
+    <img src="media/Rixi/RixiApp.png" style="width:12vmax;"><br>
+    <!--img src="media/Rixi/RixiWhiteNoSteroid.png" style="width:40%;"-->
+
+    <div class="w3-row w3-center Thai" style="font-size: 2vmax;color:#feffff">
+    <img src="media/Rixi/linePink.png" style="width: 50%"><br>
+    <span style="font-size: 3.3vmax;color:#333;">Rixi ริกซี่</span><br>
     แท่งเย็นสำหรับบรรเทาอาการ <span style="font-size: 2.5vmax">ริดสีดวงทวารหนัก </span>
+    </div>
+    <div class="w3-row w3-margin">
+        <span class="w3-badge pink w3-center Thai" 
+        style="font-size:2vmax;line-height: 100%;padding:2vmax 1vmax;color:#555;margin: 0.5vmax 1vmax">
+        <span style="font-weight:600">ไม่มี</span> <br>สเตียรอยด์</span>
+        <span class="w3-badge pink w3-center Thai" 
+        style="font-size:2vmax;line-height: 100%;padding:2vmax 1vmax;color:#555;margin: 0.5vmax 1vmax">
+        <span style="font-weight:600">ไม่มียา</span> <br>หรือสารเคมี</span>
+        <span class="w3-badge pink w3-center Thai" 
+        style="font-size:2vmax;line-height: 100%;padding:2vmax 1vmax;color:#555;margin: 0.5vmax 1vmax">
+        ใช้ง่าย<br>
+        <span style="font-weight:600">ได้ผลทันที</span>
+    </div>
 
-</div>
-
-<div class="w3-row w3-padding w3-center Thai" style="margin-top: 2vmax;color:#555">
-    <div class="w3-col s3 w3-mobile">
-        <span style="border-bottom: 0.1vmax solid #b5dbd2">
-        <img src="media/Rixi/left.png" style="width: 2vmax;padding-bottom:2vmax">
-        <span style="font-size: 2vmax">Rixi คืออะไร</span></span>
-    </div>
-    <div class="w3-col s3 w3-mobile">
-            <span style="border-bottom: 0.1vmax solid #b5dbd2">
-            <span style="font-size: 2vmax">ทำไมต้องริกซี</span>
-            <img src="media/Rixi/right.png" style="width: 2vmax;padding-bottom:2vmax">
-            </span>
-    </div>
-    <div class="w3-col s3 w3-mobile">
-            <span style="border-bottom: 0.1vmax solid #b5dbd2">
-            <span style="font-size: 2vmax">ริดสีดวงทวารหนักคืออะไร</span>
-            <img src="media/Rixi/noFill.png" style="width: 2vmax;padding-bottom:2vmax">
-            </span>
-    </div>
-    <div class="w3-col s3 w3-mobile">
-            <span style="border-bottom: 0.1vmax solid #b5dbd2">
-            <span style="font-size: 2vmax">ริดสีดวงทวารหนักคืออะไร</span>
-            <img src="media/Rixi/round.png" style="width: 1.5vmax;padding-bottom:2vmax;opacity: 0.95">
-            </span>
-    </div>
-    <div id="demo"></div>
-</div>
 </div>
 
 </div>
@@ -70,8 +69,8 @@ function paddable(){
 //toPad
     var scnH = screen.height;
     var contentH = document.getElementById("toPad").clientHeight;
-    var pad = (scnH-contentH)/2;
-    document.getElementById("paddable").style.paddingTop = pad+"px"
+    var pad = ((scnH-contentH)/2)-(0.1*scnH);
+    document.getElementById("toPad").style.paddingTop = pad+"px"
 }
 
 </script>
