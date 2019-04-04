@@ -21,7 +21,8 @@
 
 <body>
 <div style="background: radial-gradient(#a7eae3,#74DDD3,#78DeD4);height: 100vh">
-<div class="w3-container w3-center" style="padding-top:10%">
+<div id="toPad" >
+<div class="w3-center" id="paddable">
     <img src="media/Rixi/RixiWhiteNoSteroid.png" style="width:40%;opacity:0.98">
 </div>
 <div class="w3-row w3-center Thai" style="font-size: 2vmax;color:#fcfeff">
@@ -30,37 +31,49 @@
 
 </div>
 
-<div class="w3-content w3-center Thai" style="margin-top: 2vmax;color:#555">
-    <div class="w3-row">
+<div class="w3-row w3-padding w3-center Thai" style="margin-top: 2vmax;color:#555">
+    <div class="w3-col s3 w3-mobile">
         <span style="border-bottom: 0.1vmax solid #b5dbd2">
-        <img src="media/Rixi/Asset1.png" style="width: 2vmax;padding-bottom:2vmax">
+        <img src="media/Rixi/left.png" style="width: 2vmax;padding-bottom:2vmax">
         <span style="font-size: 2vmax">Rixi คืออะไร</span></span>
     </div>
-    <div class="w3-row">
+    <div class="w3-col s3 w3-mobile">
             <span style="border-bottom: 0.1vmax solid #b5dbd2">
             <span style="font-size: 2vmax">ทำไมต้องริกซี</span>
-            <img src="media/Rixi/Asset2.png" style="width: 2vmax;padding-bottom:2vmax">
+            <img src="media/Rixi/right.png" style="width: 2vmax;padding-bottom:2vmax">
             </span>
     </div>
-    <div class="w3-row">
+    <div class="w3-col s3 w3-mobile">
             <span style="border-bottom: 0.1vmax solid #b5dbd2">
             <span style="font-size: 2vmax">ริดสีดวงทวารหนักคืออะไร</span>
-            <img src="media/Rixi/Asset5.png" style="width: 2vmax;padding-bottom:2vmax">
+            <img src="media/Rixi/noFill.png" style="width: 2vmax;padding-bottom:2vmax">
             </span>
     </div>
+    <div class="w3-col s3 w3-mobile">
+            <span style="border-bottom: 0.1vmax solid #b5dbd2">
+            <span style="font-size: 2vmax">ริดสีดวงทวารหนักคืออะไร</span>
+            <img src="media/Rixi/round.png" style="width: 1.5vmax;padding-bottom:2vmax;opacity: 0.95">
+            </span>
+    </div>
+    <div id="demo"></div>
+</div>
 </div>
 
-
-   
-    
-         
-    
-
-
-
-
-
+</div>
 <script>
+
+window.onload = function(){
+    paddable()
+}
+
+function paddable(){
+//toPad
+    var scnH = screen.height;
+    var contentH = document.getElementById("toPad").clientHeight;
+    var pad = (scnH-contentH)/2;
+    document.getElementById("paddable").style.paddingTop = pad+"px"
+}
+
 </script>
 </body>    
 </html>
