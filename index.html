@@ -21,6 +21,12 @@ background-size: contain;background-position: center;background-repeat:no-repeat
         color:#5c5d60;}
 .dkGrey {color:#5c5d60}
 .pink {color:#fab4ab}
+.font53 {font-size: 5vmax}
+
+@media only screen and (max-width: 600px) {
+    .font53 {font-size: 3vmax}
+}
+
 </style>
 
 
@@ -80,19 +86,50 @@ background-size: contain;background-position: center;background-repeat:no-repeat
 </div>
 
 <!--3rd stage-->
-<div class="w3-cell-row" style="margin-top: 5vmax;background-color: rgba(116, 221, 211, 0.5);padding: 2vmax">
-<div class="w3-cell w3-cell-middle w3-center Thai dkGrey" 
-style="background-image:url(media/Rixi/RtLg.png);background-repeat: no-repeat;background-position: center;
-background-size: 60vw;height:50vw;font-size: 5vmax;margin-top: 3vmax;width:90vw">
-    แช่เย็น<br> แล้วก็ใช้ได้เลย
+<div class="w3-row font53" style="margin-top: 5vmax;background-color: rgba(116, 221, 211, 0.5);padding: 2vmax">
+    <div class="w3-col s6 w3-center Thai dkGrey" 
+    style="background-image:url(media/Rixi/LtLg.png);background-repeat: no-repeat;background-position: center;
+    background-size: 45vw;height:45vw;padding: 10vw 1vw 1vw 1vw">
+    เหมาะกับ<br>ทุกคน
+    </div>
+
+    <div class="w3-col s6 w3-center Thai dkGrey" 
+    style="background-image:url(media/Rixi/RtLg.png);background-repeat: no-repeat;background-position: center;
+    background-size: 45vw;height:45vw;padding: 10vw 1vw 1vw 1vw">
+    แช่เย็น<br>แล้วก็ใช้ได้เลย
+    </div>
 </div>
-<div class="w3-cell"></div>
+
+<!--how to use-->
+<div class="w3-row w3-center Thai" style="font-size:5vmax;margin: 3vmax 0 0.5vmax 0">
+    วิธีใช้
 </div>
+<div id="sameHeight" class="w3-row w3-padding Thai" style="border: #5c5d60 solid 0.2vmax;font-size:3vmax">
+    <div class="w3-col w3-mobile s12 l3 w3-padding">1. แช่เย็น
+        <img src="media/Rixi/step1.png" style="width:100%">
+    </div>
+    <div class="w3-col w3-mobile s12 l3 w3-padding">2. บีบเพื่อเปิด
+        <img src="media/Rixi/step2.png" style="width:100%">
+    </div>
+    <div class="w3-col w3-mobile s12 l3 w3-padding">3. สอด
+        <img src="media/Rixi/step3.png" style="width:100%">
+    </div>
+    <div class="w3-col w3-mobile s12 l3 w3-padding">4. ล้าง
+        <img src="media/Rixi/step4.png" style="width:100%">
+    </div>
+
+</div>
+<div id="demo"></div>
 
 <script>
 
 window.onscroll = function(){
     menuReact()
+}
+
+window.onload = function(){
+    if (screen.width>600){
+    adjustHeight('sameHeight')}
 }
 
 function menuReact(){
@@ -103,6 +140,23 @@ function menuReact(){
         menu.style.boxShadow = 'none'
     }
 }
+
+function adjustHeight(id){
+    var children = document.getElementById(id).children;
+    //get max height
+    var height = []
+    
+    for (var i=0;i<children.length;i++){
+        height.push(children[i].clientHeight)
+    }
+    var maxHeight = Math.max.apply(null, height)
+    
+    for (var j=0;j<children.length;j++){
+        children[j].style.height = maxHeight + "px"
+    }
+}
+
+
 
 </script>
 </body>    
