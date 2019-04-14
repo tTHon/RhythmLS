@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+
 <style>
 .Thai {font-family: 'Prompt', sans-serif;}
 .menuItem {cursor: pointer;}
@@ -25,6 +26,7 @@ background-size: contain;background-position: center;background-repeat:no-repeat
 .img40 {width:40%}
 .mobileOnly {display: none}
 .homePage {padding-top: 1vmax;padding-bottom: 1vmax}
+.mobilePad {padding: 1vmax}
 
 
 @media only screen and (max-width: 600px) {
@@ -32,7 +34,8 @@ background-size: contain;background-position: center;background-repeat:no-repeat
     .img40 {width:100%}
     .mobileOnly {display: inline}
     .noMobile {display: none}
-    .homePage {padding-top: 3vmax;padding-bottom: 3vmax}
+    .homePage {padding-top: 1vmax;padding-bottom: 2vmax}
+    .mobilePad {padding: 0.5vmax}
 }
 
 </style>
@@ -41,13 +44,21 @@ background-size: contain;background-position: center;background-repeat:no-repeat
 <body>
 
 <!--home-->
-<div id="top" style="background: radial-gradient(#74DDD3,#78DeD4);padding-bottom: 1vmax;height:100vh">
+<div id="top" style="background: radial-gradient(#74DDD3,#78DeD4);padding-bottom: 1vmax;">
 <!--menu-->
-<div id="menu" class="w3-bar w3-top">
-    <div class="w3-bar-item menuItem" style="margin-right: 0;padding-right: 0">
-    <i class="fas fa-bars fa-lg" style="color:#555;vertical-align: middle;"></i></div>
-    <div class="w3-bar-item menuItem">
-    <img src="media/Rixi/rixiGrey.png" style="width: 5vh"></div>
+
+<div id="menu" class="w3-bar-block w3-top menuItem">
+    <span style="padding-left: 0.5vmax">
+    <i class="fas fa-bars fa-lg" style="color:#555;vertical-align: middle;"></i>
+        <img src="media/Rixi/rixiGrey.png" style="width: 5vh"></span>
+    <div class="w3-collapse">
+    <div class="w3-bar-item menuItem Thai showOnClick">
+        หน้าแรก</div>
+    <div class="w3-bar-item menuItem Thai showOnClick">
+        วิธีใช้</div>
+    <div class="w3-bar-item menuItem Thai showOnClick">
+        สั่งซื้อ</div>
+    </div>
 </div>
 <br><br>
 
@@ -56,27 +67,13 @@ background-size: contain;background-position: center;background-repeat:no-repeat
 
     <!--nonMobile-->
     <div class="w3-row w3-center Thai noMobile" style="font-size: 2.8vmax;color:white;
-    padding: 0 2vmax 2vmax 2vmax">
+    padding: 1vmax 2vmax 2vmax 2vmax">
         <div class="w3-cell w3-cell-middle">
         <img src="media/Rixi/RixiEnTh.png" style="width: 40vw;"><br>
         <img src="media/Rixi/linePink.png" style="width: 90%;"><br>
         <div style="font-size: 3.5vmax;color:#5c5d60;line-height: 100%;margin-top: 1vmax;padding: 1vmax">
         แท่งเย็นสำหรับบรรเทาอาการ<span style="color: #f4704e">ริดสีดวงทวารหนัก</span></div>
-        </div>
-        <div class="w3-cell w3-cell-middle">
-        <img src="media/Rixi/PackShot/appBox.png" style="width:100%;padding:1vmax"></div>
-    </div>
-
-    <!--mobile-->
-    <div class="w3-row w3-center Thai mobileOnly" style="font-size: 2.8vmax;color:white;padding: 2vmax">
-        <img src="media/Rixi/RixiEnTh.png" style="width: 40vw;"><br>
-        <img src="media/Rixi/linePink.png" style="width: 90%;"><br>
-        <div style="font-size: 3.5vmax;color:#5c5d60;line-height: 100%;margin-top: 1vmax;padding: 1vmax">
-        แท่งเย็นสำหรับบรรเทาอาการ<span style="color: #f4704e">ริดสีดวงทวารหนัก</span></div>
-        <img src="media/Rixi/PackShot/appBox.png" style="width:100%">
-    </div>
-
-    <div class="w3-cell-row w3-padding" style="margin-left: auto;margin-right: auto;margin-top:1vmax;
+        <div class="w3-cell-row w3-padding" style="margin-left: auto;margin-right: auto;margin-top:1vmax;
     margin-bottom: 2vmax">
         <div class="w3-cell w3-cell-middle w3-center Thai featBullet" 
         style="background-image: url(media/Rixi/ring.png)">
@@ -91,6 +88,46 @@ background-size: contain;background-position: center;background-repeat:no-repeat
             <span style="font-weight:600">ช่วยดัน</span><br>
             ริดสีดวง<br><span style="font-size:1.8vmax">กลับเข้า<br>รูทวาร</span>
         </div>
+        </div>
+        </div>
+        <div class="w3-cell w3-cell-middle">
+        <img src="media/Rixi/PackShot/appBox.png" style="width:100%;padding:1vmax"></div>
+    </div>
+
+
+    <!--mobile-->
+    <div class="w3-row w3-center Thai mobileOnly" style="font-size: 2.8vmax;color:white;padding: 1vmax">
+        <img src="media/Rixi/RixiEnTh.png" style="width: 40vw;"><br>
+        <img src="media/Rixi/linePink.png" style="width: 90%;"><br>
+        <div style="font-size: 3.5vmax;color:#5c5d60;line-height: 100%;margin-top: 1vmax;padding: 1vmax">
+        แท่งเย็นสำหรับบรรเทาอาการ<span style="color: #f4704e">ริดสีดวงทวารหนัก</span></div>
+        <img src="media/Rixi/PackShot/appBox.png" style="width:100%">
+    </div>
+
+    <div class="w3-cell-row w3-padding mobileOnly" style="margin-left: auto;margin-right: auto;margin-top:1vmax;
+    margin-bottom: 2vmax">
+        <div class="w3-cell w3-cell-middle w3-center Thai featBullet" 
+        style="background-image: url(media/Rixi/ring.png)">
+        <span style="font-weight:600;">ไม่มี</span> <br>สเตียรอยด์
+        </div>
+        <div class="w3-cell w3-cell-middle w3-center Thai featBullet" 
+        style="background-image: url(media/Rixi/ringSolid.png)">
+        <span style="font-weight:600">ไม่มียา</span> <br>หรือสารเคมี
+        </div>
+        <div class="w3-cell w3-cell-middle w3-center Thai featBullet" 
+        style="background-image: url(media/Rixi/ring.png)">
+            <span style="font-weight:600">ช่วยดัน</span><br>
+            ริดสีดวง<br><span style="font-size:1.8vmax">กลับเข้า<br>รูทวาร</span>
+        </div>
+    </div>
+
+    <!--contact-->
+    <div class="w3-btn Thai w3-round-large w3-padding" 
+    style="font-size:2.5vh;border:#ddd solid 0.1vmax;background-color:#fcd5d0;margin-top:3vh">
+        <i class="fas fa-hand-point-right"></i>
+        <a href="#contact" style="text-decoration:none;color:#555">
+                ติดต่อ - สั่งซื้อ <img src="media/Rixi/rixiGrey.png" style="width: 3.5vh;padding-bottom:0.3vh">
+        </a>
     </div>
 
 </div>
@@ -134,7 +171,7 @@ style="border: #5c5d60 solid 0.2vmax;font-size:3vmax">
     <div class="w3-col w3-mobile s12 m12 l6" style="padding:2vmax">2. "บีบ"เพื่อเปิด
         <img src="media/Rixi/step2.png" style="width:100%;padding: 2vmax">
     </div>
-    <div class="w3-col w3-mobile s12 m12 l6" style="padding:2vmax">3. สอดเข้าไปในรูทวาร ทิ้งไว้ 6 – 8 นาที
+    <div class="w3-col w3-mobile s12 m12 l6" style="padding:2vmax">3. สอดเข้าไปในรูทวาร <br>ทิ้งไว้ 6 – 8 นาที
 
         <img src="media/Rixi/step3.png" style="width:100%;padding: 2vmax">
     </div>
@@ -198,25 +235,28 @@ style="border: #5c5d60 solid 0.2vmax;font-size:3vmax">
         <div style="font-size: 5vmax;padding:2vmax;color:#555;font-weight: 700">
                 ติดต่อ – สั่งซื้อ ผลิตภัณฑ์</div>
         
-        <div class="Thai w3-container" style="font-size: 2.5vmax;color:#505050;
+        <div class="Thai w3-container mobilePad" style="font-size: 2vmax;color:#505050;
         margin-left: auto;margin-right: auto">
-        
-        <span style="color:#f14317"><b>สนใจสั่งซื้อ RIXI ติดต่อได้ที่</b></span><br> 
-                Tel: 	  083-5474415<br>
-                Line:	  RIXI<br>
-                Email: RIXITHAILAND@OUTLOOK.COM
-                
+            <div class="w3-content mobilePad" style="border: solid black 0.1vmax;text-align: left;">
+            <span style="color:#f14317"><b>สนใจสั่งซื้อ RIXI ติดต่อได้ที่</b></span><br> 
+            <i class="fas fa-phone"><span style="color:#505050;font-weight: 400;font-size: 2vmax"> 083-5474415</span></i><br>
+            <i class="fab fa-line" style="color:#00c300" ><span style="color:#505050;font-weight: 400;font-size: 2vmax"> RIXI</span></i><br>
+            <i class="fas fa-envelope"><span style="color:#505050;font-weight: 400;font-size: 2vmax"> RIXITHAILAND@OUTLOOK.COM</span></i>     
+            
+                <div class="Thai" style="font-size: 2vmax;color:#505050;margin-top:3vmax">
+                        <b>จัดจำหน่ายโดย</b><br>
+                        บริษัท แนพ ฟาร์ม จำกัด<br>
+                        43 ซอยปุณณวิถี 12 ถนนสุขุมวิท 101 แขวงบางจาก<br>
+                        เขตพระโขนง กรุงเทพมหานคร 10260 ประเทศไทย<br>
+                        โทร: 083-5474415<br>
+                        RIXITHAILAND@outlook.com<br>
+                        
+                </div>
+            </div>
+            
         </div>
 
-        <div class="Thai w3-container" style="font-size: 2.5vmax;color:#505050;margin-top:3vmax">
-                <span style="color:#f14317"><b>จัดจำหน่ายโดย</b><br></span>
-                บริษัท แนพ ฟาร์ม จำกัด<br>
-                43 ซอยปุณณวิถี 12 ถนนสุขุมวิท 101 แขวงบางจาก<br>
-                เขตพระโขนง กรุงเทพมหานคร 10260 ประเทศไทย<br>
-                โทร: 083-5474415<br>
-                Email: RIXITHAILAND@outlook.com<br>
-                
-        </div>
+        
     </div>
 
 
