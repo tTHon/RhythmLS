@@ -237,7 +237,7 @@ style="border: #5c5d60 solid 0.2vmax;font-size:3vmax">
 
 
 <!--contact-->
-<div id="contact" class="w3-row w3-center Thai" style="padding:3vmax;background-color: #fcd5d0">
+<div id="contact" class="w3-row w3-center Thai w3-white" style="padding:3vmax;color:#505050">
         <div style="font-size: 5vmax;padding:2vmax;color:#555;font-weight: 700">
                 ติดต่อ – สั่งซื้อ ผลิตภัณฑ์</div>
         
@@ -245,9 +245,9 @@ style="border: #5c5d60 solid 0.2vmax;font-size:3vmax">
         margin-left: auto;margin-right: auto">
             <div class="w3-content" style="border: solid black 0.1vmax;text-align: left;padding: 1vmax">
             <span style="color:#f14317"><b>สนใจสั่งซื้อ RIXI ติดต่อได้ที่</b></span><br> 
-            <i class="fas fa-phone"><span style="color:#505050;font-weight: 400;font-size: 2vmax"> 083-5474415</span></i><br>
-            <i class="fab fa-line fa-lg" style="color:#00c300" ><span style="color:#505050;font-weight: 400;font-size: 2vmax"> RIXI</span></i><br>
-            <i class="fas fa-envelope"><span style="color:#505050;font-weight: 400;font-size: 2vmax"> RIXITHAILAND@OUTLOOK.COM</span></i>     
+            <i class="fas fa-phone"><span style="color:#505050;font-weight: 400;font-size: 2vmax" class="Thai"> 083-5474415</span></i><br>
+            <i class="fab fa-line fa-lg" style="color:#00c300" ><span style="color:#505050;font-weight: 400;font-size: 2vmax" class="Thai"> RIXI</span></i><br>
+            <i class="fas fa-envelope"><span style="color:#505050;font-weight: 400;font-size: 2vmax" class="Thai"> RIXITHAILAND@OUTLOOK.COM</span></i>     
             
                 <div class="Thai" style="font-size: 2vmax;color:#505050;margin-top:3vmax">
                         <b>จัดจำหน่ายโดย</b><br>
@@ -265,16 +265,91 @@ style="border: #5c5d60 solid 0.2vmax;font-size:3vmax">
         
     </div>
 
+<!--certificate nonMobile-->
+<div class="w3-row w3-center Thai" style="font-size:1.5vmax;color:#878787">Registered Members of:</div>
+<div class="w3-row noMobile">
+    <div class="w3-col l3 m0" style="color:transparent"> 
+        &nbsp;
+    </div>
+    <div class="w3-col m2 l1 w3-padding vCenter">
+        <img src="media/DBD.JPEG" style="width:100%">
+    </div>
+    <div class="w3-col m2 l1 w3-padding  vCenter">
+        <img src="media/ITAP.png" style="width:100%">
+    </div>
+    <div class="w3-col m2 l1 w3-padding  vCenter">
+        <img src="media/NSTDA.jpg" style="width:100%">
+    </div>
+    <div class="w3-col m2 l1 w3-padding vCenter">
+        <img src="media/DIP-Logo.png" style="width:100%">
+    </div>
+    <div class="w3-col m2 l1 w3-padding vCenter">
+        <img src="media/FDA.png" style="width:100%">
+    </div>
+    <div class="w3-col m2 l1 w3-padding vCenter">
+        <img src="media/PP20.jpg" style="width:100%">
+    </div>
+    <div class="w3-col l3 m0"> </div>
+
+</div>
+
+<!--certificate Mobile-->
+<div class="w3-row mobileOnly">
+      
+        <div class="w3-col s4 w3-padding">
+            <img src="media/DBD.JPEG" style="width:100%">
+        </div>
+        <div class="w3-col s4 w3-padding">
+            <img src="media/ITAP.png" style="width:100%">
+        </div>
+        <div class="w3-col s4 w3-padding">
+                <img src="media/NSTDA.jpg" style="width:100%">
+            </div>
+</div>
+<div class="w3-row mobileOnly">
+        <div class="w3-col s4 w3-padding">
+                <img src="media/DIP-Logo.png" style="width:100%">
+        </div>
+        <div class="w3-col s4 w3-padding">
+            <img src="media/FDA.png" style="width:100%">
+        </div>
+        <div class="w3-col s4 w3-padding">
+            <img src="media/PP20.jpg" style="width:100%">
+        </div>
+</div>
+
+
 
 <script>
 
 window.onscroll = function(){
-    menuReact()
+    menuReact();
 }
 
 window.onload = function(){
     if (screen.width>600){
-    adjustHeight('sameHeight')}
+    adjustHeight('sameHeight')
+    verticalCenter()}
+}
+
+function verticalCenter(){
+    var v = document.getElementsByClassName('vCenter')
+    
+    //find content height
+    var h = [];var i;
+    for (i=0;i<v.length;i++){
+        var height = v[i].offsetHeight;
+        h.push(height)
+    }
+    h.sort(function(a,b){return b-a})
+    var maxH = h[0]
+    
+    //set margin
+    var j;
+    for (j=0;j<v.length;j++){
+        var m = (maxH-v[j].offsetHeight)/2;
+        v[j].style.marginTop = m+"px"
+    }
 }
 
 function menuReact(){
