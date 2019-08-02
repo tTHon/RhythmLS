@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+      xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+      >
       
-
 <url>
   <loc>https://www.rixithailand.com/</loc>
   <lastmod>2019-07-28</lastmod>
@@ -20,6 +22,55 @@
   <lastmod>2019-07-28</lastmod>
   <priority>1.0</priority>
 </url>
+
+<url>
+  <loc>https://www.rixithailand.com</loc>
+  <video:video>
+       <video:title>Rixi สำหรับ ริดสีดวงทวารหนัก</video:title>
+       <video:description>การประคบเย็น เป็นสิ่งแรกที่ควรทำ เมื่อริดสีดวงมีอาการบวม และปวด
+Rixi (ริกซี) แท่งเย็นสำหรับประคบเย็นริดสีดวง
+ปลอดภัย ใช้ง่าย ไม่มีสเตียรอยด์</video:description>
+       <video:content_loc>
+           https://www.rixithailand.com/media/clips/coworkers.mp4</video:content_loc>
+       <video:player_loc>
+         http://www.example.com/videoplayer.php?video=123</video:player_loc>
+       <video:duration>64</video:duration>
+       
+       <video:family_friendly>yes</video:family_friendly>
+       <video:live>no</video:live>
+     </video:video>
+   </url>
+
+<url>
+    <loc>https://www.rixithailand.com</loc>
+    <image:image>
+      <image:loc>https://www.rixithailand.com/media/Rixi/PackShot/appBoxReSz.png</image:loc>
+      <image:title>Rixi PackShot | กล่องบรรจุผลิตภัณฑ์ริกซี</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.rixithailand.com/media/Rixi/step1.png</image:loc>
+      <image:title>วิธีใช้ริกซี step 1</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.rixithailand.com/media/Rixi/step2.png</image:loc>
+      <image:title>วิธีใช้ริกซี step 2</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.rixithailand.com/media/Rixi/step3.png</image:loc>
+      <image:title>วิธีใช้ริกซี step 3</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.rixithailand.com/media/Rixi/step4.png</image:loc>
+      <image:title>วิธีใช้ริกซี step 4</image:title>
+    </image:image>
+    
+  </url> 
+  
+
 
 
 
