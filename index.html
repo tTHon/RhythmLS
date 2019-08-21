@@ -22,7 +22,7 @@
 <meta charset="UTF-8">
 <meta name="description" content="เวชภัณฑ์สำหรับบรรเทาริดสีดวงภายใน และภายนอก สามารถใช้เองที่บ้านได้อย่างสะดวก ตัวเลือกสุดท้ายก่อนการผ่าตัด">
 <meta name="keywords" content="ริดสีดวงทวารหนัก, วิธีรักษาริดสีดวงทวารหนัก, hemorrhoid, ยารักษาริดสีดวง, ยาริดสีดวง, ริดสีดวงภายนอก, ริดสีดวง, cold therapy, อุปกรณ์สำหรับริดสีดวง, no steriods">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
@@ -60,13 +60,13 @@ background-size: contain;background-position: center;background-repeat:no-repeat
 <!--home-->
 <div id="top" style="background: radial-gradient(#74DDD3,#78DeD4);padding-bottom: 1vmax;">
 <!--menu-->
-<div class="w3-bar w3-top" id="menu" style="color:#555;">
+<!--div class="w3-bar w3-top" id="menu" style="color:#555;">
         <div class="w3-bar-item w3-right" style="cursor:pointer;vertical-align:middle">
             
             <a href="https://www.facebook.com/RIXITHAILAND/" target="_blank">
             <i class="fab fa-facebook-square" style="color:#3C5A99;font-size: 2.5vh"></a></i>
         </div>
-    <div class="w3-bar-item menuItem" onclick="openMenu()">
+    <div class="w3-bar-item menuItem">
         <span style="padding-left: 0.5vmax;">
         <i class="fas fa-bars fa-lg" style="color:#555;vertical-align: middle;"></i>
         <img src="media/Rixi/rixiGrey.png" style="width: 5vh"> 
@@ -84,7 +84,7 @@ background-size: contain;background-position: center;background-repeat:no-repeat
         สั่งซื้อ</a></div>
     
  
-</div>
+</div-->
 
 
 
@@ -365,9 +365,9 @@ style="border: #5c5d60 solid 0.2vmax;font-size:3vmax">
 
 <script>
 
-window.onscroll = function(){
-    menuReact();
-}
+
+//window.onscroll = function(){
+   //menuReact();}
 
 window.onload = function(){
     if (screen.width>600){
@@ -395,33 +395,31 @@ function verticalCenter(){
     }
 }
 
-function menuReact(){
-    var menu = document.getElementById('menu')
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
-        menu.style.boxShadow = '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
-    } else {
-        menu.style.boxShadow = 'none'
-    }
-}
+//function menuReact(){
+    //var menu = document.getElementById('menu')
+    //if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+    //    menu.style.boxShadow = '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
+    //} else {
+    //    menu.style.boxShadow = 'none'
+    //}}
 
-var menuStatus = 0;
-function openMenu(){
+//var menuStatus = 0;
+//function openMenu(){
     
-    var h = document.getElementsByClassName('showOnClick')
+    //var h = document.getElementsByClassName('showOnClick')
 
     //check menu status
-    if (menuStatus==0){
-        menuStatus=1;
-        for (var i=0;i<h.length;i++){
-            h[i].style.display ="inline"
-        }
-    } else {
-        menuStatus=0;
-        for (var i=0;i<h.length;i++){
-            h[i].style.display ="none"
-        }
-    }
-}
+    //if (menuStatus==0){
+    //    menuStatus=1;
+    //    for (var i=0;i<h.length;i++){
+    //        h[i].style.display ="inline"
+    //    }
+    //} else {
+    //    menuStatus=0;
+    //    for (var i=0;i<h.length;i++){
+    //        h[i].style.display ="none"
+    //    }
+    //}}
 
 function adjustHeight(id){
     var children = document.getElementById(id).children;
