@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="th, en">
 <head>
 
 
@@ -22,6 +22,7 @@
 <meta charset="UTF-8">
 <meta name="description" content="เวชภัณฑ์สำหรับบรรเทาริดสีดวงภายใน และภายนอก สามารถใช้เองที่บ้านได้อย่างสะดวก ตัวเลือกสุดท้ายก่อนการผ่าตัด">
 <meta name="keywords" content="ริดสีดวงทวารหนัก, วิธีรักษาริดสีดวงทวารหนัก, hemorrhoid, ยารักษาริดสีดวง, ยาริดสีดวง, ริดสีดวงภายนอก, ริดสีดวง, cold therapy, อุปกรณ์สำหรับริดสีดวง, no steriods">
+<meta name="author" content="t'Thon">
 
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -87,11 +88,6 @@ background-size: contain;background-position: center;background-repeat:no-repeat
  
 </div-->
 
-
-
-<br><br>
-
-
 <div class="w3-center homePage">
 
     <!--nonMobile-->
@@ -144,6 +140,7 @@ background-size: contain;background-position: center;background-repeat:no-repeat
     
 
     <!--contact-->
+    <h2>
     <div class="w3-bar w3-mobile w3-center" style="color:transparent;padding-top:0.5vmax">
         <!--i class="fas fa-hand-point-right"></i>
         <a href="#contact" style="text-decoration:none;color:#555">
@@ -160,6 +157,7 @@ background-size: contain;background-position: center;background-repeat:no-repeat
             </a>
         </div>
     </div>
+    </h2>
 
 </div>
 </div>
@@ -283,6 +281,7 @@ style="border: #5c5d60 solid 0.2vmax;font-size:3vmax;padding: 2vmax">
         </span>
     </h2>
 
+    <h4>
     <div class="w3-row w3-padding w3-mobile">
         <div class="w3-col s6 w3-mobile">
                     <img src="media/noSteroids.png" style="width:100%" alt="Rixi contains NO steriods">
@@ -302,6 +301,7 @@ style="border: #5c5d60 solid 0.2vmax;font-size:3vmax;padding: 2vmax">
         และใช้ได้บ่อยตามต้องการ
 
     </div>
+    </h4>
 </div>
 
 <!--contact-->
@@ -386,30 +386,30 @@ style="border: #5c5d60 solid 0.2vmax;font-size:3vmax;padding: 2vmax">
 //window.onscroll = function(){
    //menuReact();}
 
-window.onload = function(){
-    if (screen.width>600){
-    verticalCenter()}
-}
+//window.onload = function(){
+    //if (screen.width>600){
+    //verticalCenter()}
+//}
 
-function verticalCenter(){
-    var v = document.getElementsByClassName('vCenter')
+//function verticalCenter(){
+    //var v = document.getElementsByClassName('vCenter')
     
     //find content height
-    var h = [];var i;
-    for (i=0;i<v.length;i++){
-        var height = v[i].offsetHeight;
-        h.push(height)
-    }
-    h.sort(function(a,b){return b-a})
-    var maxH = h[0]
+    //var h = [];var i;
+    //for (i=0;i<v.length;i++){
+        //var height = v[i].offsetHeight;
+        //h.push(height)
+    //}
+    //h.sort(function(a,b){return b-a})
+    //var maxH = h[0]
     
     //set margin
-    var j;
-    for (j=0;j<v.length;j++){
-        var m = (maxH-v[j].offsetHeight)/2;
-        v[j].style.marginTop = m+"px"
-    }
-}
+    //var j;
+    //for (j=0;j<v.length;j++){
+        //var m = (maxH-v[j].offsetHeight)/2;
+        //v[j].style.marginTop = m+"px"
+    //}
+//}
 
 //function menuReact(){
     //var menu = document.getElementById('menu')
