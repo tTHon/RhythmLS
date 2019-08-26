@@ -190,35 +190,41 @@ background-size: contain;background-position: center;background-repeat:no-repeat
     </div>
 </div-->
 
-<!--how to use-->
-<h2 id="how2" class="w3-row w3-center Thai" style="font-size:5vmax;margin: 5vmax 0 3vmax 0">
-    วิธีใช้
-
-<div class="w3-padding w3-center" style="max-width:640px;margin-left:auto;margin-right: auto">
+<div class="w3-center" style="max-width:640px;margin-left:auto;margin-right: auto;padding: 2vmax">
+    <h2 id="what" class="w3-row w3-center Thai" style="font-size:5vmax;margin: 2vmax 0">
+        ริกซี คืออะไร</h2>
     <video autoplay loop controls width="100%" title="ริกซีคืออะไรและใช้อย่างไร">
         <source src="media/clips/ริดสีดวงมาเหรอ.mp4" type="video/mp4">
     </video>
 </div>
-<div id="sameHeight" class="w3-row w3-mobile w3-padding Thai w3-mobile" 
-style="border: #5c5d60 solid 0.2vmax;font-size:3vmax">
-    <div class="w3-col w3-mobile s12 m12 l6" style="padding:2vmax">1. แช่ช่องฟรีซอย่างน้อย 2 ชั่วโมง
-        <img src="media/Rixi/howToUseRixi1.png" style="width:100%;padding: 2vmax" 
+
+<!--how to use-->
+<div class="w3-row w3-mobile Thai w3-center" 
+style="border: #5c5d60 solid 0.2vmax;font-size:3vmax;padding: 2vmax">
+    <h2 id="how2" class="w3-row w3-center Thai" style="font-size:5vmax;margin: 2vmax 0">
+    วิธีใช้</h2>
+    <div class="w3-border w3-padding">
+    1. แช่ช่องฟรีซอย่างน้อย 2 ชั่วโมง <br>
+    <img src="media/Rixi/howToUseRixi1.png" style="width:100%;max-width: 600px;padding: 2vmax" 
         alt="แช่ช่องฟรีซอย่างน้อย 2 ชั่วโมง">
     </div>
-    <div class="w3-col w3-mobile s12 m12 l6" style="padding:2vmax">2. "บีบ"เพื่อเปิด
-        <img src="media/Rixi/howToUseRixi2.png" style="width:100%;padding: 2vmax" alt="บีบเพื่อเปิด">
+    <div class="w3-border w3-padding">
+    2. "บีบ"เพื่อเปิด<br>
+    <img src="media/Rixi/howToUseRixi2.png" style="width:100%;max-width: 600px;padding: 2vmax" alt="บีบเพื่อเปิด">
     </div>
-    <div class="w3-col w3-mobile s12 m12 l6" style="padding:2vmax">3. สอดเข้าไปในรูทวาร<br>ทิ้งไว้ 6 – 8 นาที
-
-        <img src="media/Rixi/howToUseRixi3.png" style="width:100%;padding: 2vmax" alt="สอดเข้าไปในรูทวาร ช่วยดันริดสีดวงเข้ารูทวาร ริดสีดวงปวด ริดสีดวงบวม">
+    <div class="w3-border w3-padding">
+    3. สอดเข้าไปในรูทวาร ทิ้งไว้ 6 – 8 นาที<br>
+    <img src="media/Rixi/howToUseRixi3.png" style="width:100%;max-width: 600px;padding: 2vmax" alt="สอดเข้าไปในรูทวาร ช่วยดันริดสีดวงเข้ารูทวาร ริดสีดวงปวด ริดสีดวงบวม">
     </div>
-    <div class="w3-col w3-mobile s12 m12 l6" style="padding:2vmax">4. ทำความสะอาดแท่งริกซี<br>และเก็บไว้ใช้ซ้ำ
-        <img src="media/Rixi/howToUseRixi4.png" style="width:100%;padding:2vmax" alt="ทำความสะอาดแท่งริกซีและเก็บไว้ใช้ซ้ำ">
+    <div class="w3-border w3-padding">
+    4. ทำความสะอาดแท่งริกซี และเก็บไว้ใช้ซ้ำ<br>
+        <img src="media/Rixi/howToUseRixi4.png" style="width:100%;max-width: 600px;padding:2vmax" alt="ทำความสะอาดแท่งริกซีและเก็บไว้ใช้ซ้ำ">
     </div>
-</div>
-<div style="font-size: 2vmax;line-height: 100%;color:#777">
+    <div style="font-size: 2vmax;line-height: 100%;color:#777">
         หมายเหตุ: กรุณาอ่านวิธีใช้โดยระเอียดในคู่มือการใช้ริกซี® ที่บรรจุอยู่ในกล่องผลิตภัณฑ์</div>
-</h2>
+</div>
+
+
 
 
 <!--child proove-->
@@ -382,7 +388,6 @@ style="border: #5c5d60 solid 0.2vmax;font-size:3vmax">
 
 window.onload = function(){
     if (screen.width>600){
-    adjustHeight('sameHeight')
     verticalCenter()}
 }
 
@@ -432,20 +437,20 @@ function verticalCenter(){
     //    }
     //}}
 
-function adjustHeight(id){
-    var children = document.getElementById(id).children;
+//function adjustHeight(id){
+    //var children = document.getElementById(id).children;
     //get max height
-    var height = []
+    //var height = []
     
-    for (var i=0;i<children.length;i++){
-        height.push(children[i].clientHeight)
-    }
-    var maxHeight = Math.max.apply(null, height)
+    //for (var i=0;i<children.length;i++){
+    //    height.push(children[i].clientHeight)
+    //}
+    //var maxHeight = Math.max.apply(null, height)
     
-    for (var j=0;j<children.length;j++){
-        children[j].style.height = maxHeight + "px"
-    }
-}
+    //for (var j=0;j<children.length;j++){
+    //    children[j].style.height = maxHeight + "px"
+    //}
+//}
 
 
 
