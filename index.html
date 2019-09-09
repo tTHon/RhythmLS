@@ -33,22 +33,18 @@
     
 </head>
   <body>
-    <!-- Google Tag Manager -->
-    <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-TZ5VZ55&gtm.url=SOURCE_URL" data-credentials="include">
-    </amp-analytics>
     <!--G Analytics-->
-    <amp-analytics type="gtag" data-credentials="include">
+    <amp-analytics type="googleanalytics" id="analytics1">
             <script type="application/json">
             {
-              "vars" : {
-                "gtag_id": "UA-138756616-1",
-                "config" : {
-                  "<GA_MEASUREMENT_ID>": { "groups": "default" }
-                },
-                "triggers": {
-                    "trackPageview": { 
-                      "on": "visible",
-                      "request": "pageview"}
+              "vars": {
+                "account": "UA-138756616-1" 
+              },
+              "triggers": {
+                "trackPageview": { 
+                  "on": "visible",
+                  "request": "pageview"
+                }
               }
             }
             </script>
