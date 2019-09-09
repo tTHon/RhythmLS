@@ -45,8 +45,32 @@
                 "config": {
                     "UA-138756616-1": {}
                 }
+                },
+            
+                "triggers": {
+                    "Video": {
+                      "on": "visible",
+                      "request": "event",
+                      "visibilitySpec": {
+                        "selector": "#Video",
+                        "visiblePercentageMin": 80,
+                        "totalTimeMin": 15000,
+                        "continuousTimeMin": 10000
+                      },
+                      "vars": {
+                        "eventId": "Video"
+                      }
+                    },
+                    
+                    "Website Exit": {
+                          "on": "click",
+                          "selector": "a",
+                          "request": "event",
+                          "vars": {
+                            "eventId": "Website Exit"
+                          }
+                        }
                 }
-         
             }
             </script>
     </amp-analytics>
