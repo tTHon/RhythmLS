@@ -20,9 +20,7 @@ Rixi (ริกซี) แท่งเย็นสำหรับประคบ
 ปลอดภัย ใช้ง่าย ไม่มีสเตียรอยด์</video:description>
        <video:content_loc>
            https://www.rixithailand.com/media/clips/ริดสีดวงมาเหรอ.mp4</video:content_loc>
-       <video:player_loc>
-         http://www.rixithailand.com/videoplayer.php?video=123</video:player_loc>
-       <video:duration>64</video:duration>
+        <video:duration>64</video:duration>
        
        <video:family_friendly>yes</video:family_friendly>
        <video:live>no</video:live>
