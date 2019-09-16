@@ -22,8 +22,12 @@
 
     <style amp-custom>
         .Thai {font-family: 'Prompt', sans-serif;}
-        .border {border: #ddd 0.1vmax solid}
-        .padding {padding: 1vmax}
+        .sectionH {font-family: 'Prompt', sans-serif;background-color:#78ded4;
+        color:#505050;padding: 0.5vmax;border-radius: 0.5vmax;border:#78ded4 solid 0.1vmax;margin-top: 0.5vmax}
+        .Q {color:white}
+        .sectionT {font-family: 'Prompt', sans-serif;margin:1.5vmax;background-color: #f1f1f1;padding: 0.5vmax;
+                    font-size:2vmax}
+        .A {font-weight: 600}
         
     </style>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
@@ -49,19 +53,22 @@
             </script>
     </amp-analytics>
 
-    <amp-accordion class="Thai" style="font-size:2vmax">
-        <section expanded>
-          <h4>Section 1</h4>
-          <p>Bunch of awesome content.</p>
+    <amp-accordion style="font-size:2vmax;padding: 1vmax">
+        <section>
+          <h3 class="sectionH"><span class="Q">ถาม:</span> จริงหรอ ที่ใคร ๆ ก็มีริดสีดวง</h3>
+          <p class="sectionT"><span class="A">ตอบ:</span> 
+              จริง 
+              ในทางการแพทย์ ริดสีดวงอาจหมายถึง กลุ่มเส้นเลือดที่มีรูปร่างเป็นติ่งบนผิวหนังในบริเวณไส้ตรงและรูทวาร ซึ่งคนทั่วไปจะรู้จักกับริดสีดวงและรู้สึกเจ็บปวดเมื่อกลุ่มเส้นเลือดนี้บวมขึ้นมาคล้ายเส้นเลือดขอด
+        </p>
         </section>
         <section>
-          <h4>Section 2</h4>
-          <div>Bunch of even more awesome content. This time in a <code><div></code>.</div>
+            <h3 class="sectionH"><span class="Q">ถาม:</span> ผู้ชายกับผู้หญิง ใครเป็นริดสีดวงมากกว่ากัน</h3>
+            <p class="sectionT"><span class="A">ตอบ:</span> 
+                ผู้ชายกับผู้หญิงมีอัตราการเป็นริดสีดวงเท่า ๆ กัน โดยริดสีดวง จะพบมากในผู้ที่มีอายุระหว่าง 45 – 65 ปี ในกลุ่มคนที่เป็นริดสีดวง 100 คน จะมี 4 คนที่มีริดสีดวงขนาดใหญ่จนต้องผ่าตัด
+    
+            </p>
         </section>
-        <section>
-          <h4>Section 3</h4>
-          <div>This is section 3</div>
-        </section>
+        
       </amp-accordion>
     
 
