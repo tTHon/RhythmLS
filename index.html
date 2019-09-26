@@ -184,10 +184,13 @@
         <h2 id="video" class="Thai" style="font-size:5vmax;margin: 2vmax 0;text-align: center">
             ริกซี คืออะไร</h2>
         <amp-video autoplay loop controls title="ริกซีคืออะไรและใช้อย่างไร" 
-        layout=responsive height="352" width="640" 
-            src="media/clips/ริดสีดวงมาเหรอ.mp4"
-            poster="media/clips/Screenshot.png"
-            ></amp-video>
+        layout="responsive" height="352" width="640" 
+            poster="media/clips/Screenshot.png">
+            <source src="media/clips/ริดสีดวงมาเหรอ.mp4" type="video/mp4" />
+            <div fallback>
+                <p>This browser does not support the video element.</p>
+              </div>
+        </amp-video>
     
     </div>
 
