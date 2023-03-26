@@ -21,7 +21,7 @@
         display: flex;align-items: center;}
     #logo {width: 40%;}
     #hamburger {display: none;}   
-    .menuBar {font-family: 'Arimo', sans-serif;padding-left: 3vmax;font-size: 1.8vmax;text-transform: uppercase;width: 15%;color: #797979;} 
+    .menuBar {font-family: 'Arimo', sans-serif;padding-left: 3vmax;font-size: 1.7vmax;text-transform: uppercase;width: 15%;color: #797979;letter-spacing: -0.1vw;} 
    
     @media only screen and (max-width:1000px) {
         #bar {border-bottom: rgb(255,182,193) 0.1vmax solid;max-width: 100%;padding-top: 0.5vmax;padding-left: 0.5vmax;}
@@ -42,7 +42,7 @@
                     Life Sciences
                 </span>
             </div>
-            <div id="hamburger">
+            <div id="hamburger" onclick="showMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
             <div class="menuBar noMobile">Menu 1</div>
@@ -51,5 +51,14 @@
         </div>
 
     </div>
+
+<script>
+
+function showMenu(){
+    
+}
+
+
+</script>
 </body>
 </html>
