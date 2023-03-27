@@ -29,18 +29,31 @@
    
     @media only screen and (max-width:1000px) {
         .logo {width: 50%;}
-        #bar, #barOnScroll {border-bottom: rgb(255,182,193) 0.1vmax solid;width: 100%;padding: 1vmax;flex-wrap: wrap;}
-        .hamburger {text-align: right;font-size: 2vmax;width: 50%;display: block;}
-        .menuMobile {width: 100%;color: #f1f1f1;text-align: center;}
+        #bar, #barOnScroll {border-bottom: rgb(255,182,193) 0.1vmax solid;width: 100%;padding: 1vmax;}
+        .hamburger {text-align: right;font-size: 2.5vmax;width: 50%;display: block;}
+        .menuMobile {width: 100%;background-color: white;text-align: center;
+            color: #555;z-index: 1;position: fixed;font-size: 2.5vmax;padding: 15vh 2vw;
+            text-transform: uppercase;line-height: 120%;animation: floatLeft 1s;}
+        .menuMobile div {padding: 2vmax;border-bottom: #ddd solid 0.1vmax;}
         .noMobile {display: none;}
-
+        .closeMenu {display: none;}
     }    
+
 
     /*animation*/
     @keyframes fade {
         0% {opacity: 0;}
         100% {opacity: 1;}
     }
+    @keyframes floatLeft {
+        0% {left: 100%}
+        100% {left: 0%;}
+    }
+    @keyframes floatRight {
+        0% {left: 0%;}
+        100% {left: 100%;}
+    }
+
 
 </style>
 <body>
@@ -54,14 +67,22 @@
                 Life Sciences
             </span>
         </div>
-        <div class="hamburger" onclick="showMenu(0)">
-            <i class="fa-solid fa-bars"></i>
+        <div class="hamburger">
+            <span class="ham" onclick="showMenu(0)">
+                <i class="fa-solid fa-bars"></i>
+            </span>
+            <span class="closeMenu" onclick="showMenu(0,'x')">
+            <i class="fa-solid fa-circle-xmark"></i>
+            </span>
         </div>
         <div class="menuBar noMobile">about us</div>
         <div class="menuBar noMobile">key areas</div>
         <div class="menuBar noMobile">contact us</div>
-        <div class="menuMobile">        
-        </div>
+    </div>
+    <div class="menuMobile"> 
+        <div>about us</div>
+        <div>key areas</div>
+        <div>contact us</div>
     </div>
     <div id="welcome">
         <div id="bar">
@@ -74,22 +95,28 @@
                     Life Sciences
                 </span>
             </div>
-            <div class="hamburger" onclick="showMenu(1)">
-                <i class="fa-solid fa-bars"></i>
+            <div class="hamburger" >
+                <span class="ham" onclick="showMenu(1)">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+                <span class="closeMenu" onclick="showMenu(1,'x')">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </span>
             </div>
             <div class="menuBar noMobile">about us</div>
             <div class="menuBar noMobile">key areas</div>
             <div class="menuBar noMobile">contact us</div>
-            <div class="menuMobile">        
-            </div>
         </div>
-
+        <div class="menuMobile"> 
+            <div>about us</div>
+            <div>key areas</div>
+            <div>contact us</div>
+        </div>
         <div id="slideShow">
 
         </div>
-
    </div>
-   <div style="height: 100vh;background-color: tan;">
+   <div style="height: 100vh;background-color: aqua;">
     content
     </div>
 
@@ -107,22 +134,48 @@ function scrollEffect(){
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         bar.style.display = 'none'
         barScroll.style.display = 'flex'
-  } else {
-        bar.style.display = 'flex'
-        barScroll.style.display = 'none'
-  }
+    } else {
+            bar.style.display = 'flex'
+            barScroll.style.display = 'none'
+    }
+
+    //close menu
+    var menuMobile = document.getElementsByClassName('menuMobile')
+    for (let index = 0; index < menuMobile.length; index++) {
+        menuMobile[index].style.display = 'none'
+        
+    }
 }
 
 function goToTop(){
     document.body.scrollIntoView({ behavior: "smooth", block: "start"});
 }
 
-function showMenu(id){
-    alert(id)
-    var menu = document.getElementsByClassName('menuMobile')    
-    menu[id].style.display = 'flex'
-    const newDiv = document.createElement('div')
-    
+function showMenu(id,x){
+    var menuMobile = document.getElementsByClassName('menuMobile')  
+    var ham = document.getElementsByClassName('ham')
+    var close = document.getElementsByClassName('closeMenu')
+
+    //to close
+    if (x=='x') {
+        //animate right
+        for (let index = 1; index < 100; index++) {
+            setTimeout(function(){
+                menuMobile[id].style.left = index+'%';
+                if (index==99){
+                menuMobile[id].style.display = 'none'  
+                }}
+            ,5*index)   
+        }
+        ham[id].style.display = 'block'
+        close[id].style.display = 'none'
+    }
+    else {
+        menuMobile[id].style.left = '0%'
+        menuMobile[id].style.display = 'block'
+        ham[id].style.display = 'none'
+        close[id].style.display = 'block'
+    }
 }
 
 
