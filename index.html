@@ -14,47 +14,114 @@
     .serif {font-family: 'Gelasio', serif;}
     .sans {font-family: 'Arimo', sans-serif;}
     #welcome {
-        background: linear-gradient(to bottom, rgb(255,202,213,0.7) 3%, rgb(255,255,255) 95%);
-        width: 100%;height: 100vh;margin: 0;
+        background: linear-gradient(to bottom, rgb(255,202,213,0.65),rgb(255,232,243,0.65),rgba(255,242,253,0.9) 25%, rgb(252,252,252) 35%);
+        width: 100%;margin: 0;
     }
-    #bar {padding:5vh 0.5vmax 0.2vmax 5vh;color: #555;font-size: 2vmax;line-height: 80%;max-width: 1200px;margin-left: auto;margin-right: auto;
-        display: flex;align-items: center;}
-    #logo {width: 40%;}
-    #hamburger {display: none;}   
-    .menuBar {font-family: 'Arimo', sans-serif;padding-left: 3vmax;font-size: 1.7vmax;text-transform: uppercase;width: 15%;color: #797979;letter-spacing: -0.1vw;} 
+    #bar, #barOnScroll {padding:5vh 0.5vmax 5vh 5vh;color: #555;font-size: 2vmax;line-height: 80%;display: flex;align-items: center;position: sticky;top: 0;left: 0;z-index: 1;
+    }
+    #barOnScroll {display: none;background-color: #f5f5f5;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);}
+    #bar {animation: fade 2s ease-out 1}
+    .logo {width: 40%;cursor: pointer;}
+    .hamburger {display: none;}   
+    .menuBar {font-family: 'Arimo', sans-serif;padding-left: 3vmax;font-size: 1.7vmax;text-transform: uppercase;width: 15%;color: #797979;letter-spacing: -0.1vmin;} 
+    .menuMobile {display: none;}
+    #slideShow {height:85vh;width: 100%;border-radius: 1vw;border: rgb(255,182,193) solid 0.1vmax;}
    
     @media only screen and (max-width:1000px) {
-        #bar {border-bottom: rgb(255,182,193) 0.1vmax solid;max-width: 100%;padding-top: 0.5vmax;padding-left: 0.5vmax;}
-        #hamburger {text-align: right;font-size: 2vmax;width: 50%;display: block;}
-        #logo {width: 50%;}
+        .logo {width: 50%;}
+        #bar, #barOnScroll {border-bottom: rgb(255,182,193) 0.1vmax solid;width: 100%;padding: 1vmax;flex-wrap: wrap;}
+        .hamburger {text-align: right;font-size: 2vmax;width: 50%;display: block;}
+        .menuMobile {width: 100%;color: #f1f1f1;text-align: center;}
         .noMobile {display: none;}
+
     }    
+
+    /*animation*/
+    @keyframes fade {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+
 </style>
 <body>
+    <div id="barOnScroll">
+        <div class="logo" style="text-align: left;" onclick="goToTop()">
+            <span class="serif" style="font-size: 2vmax;color: crimson;">
+                RHYTHM
+            </span>
+            <br>
+            <span class="sans" style="font-size: 1.6vmax;letter-spacing: -0.1vmax;">
+                Life Sciences
+            </span>
+        </div>
+        <div class="hamburger" onclick="showMenu(0)">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="menuBar noMobile">about us</div>
+        <div class="menuBar noMobile">key areas</div>
+        <div class="menuBar noMobile">contact us</div>
+        <div class="menuMobile">        
+        </div>
+    </div>
     <div id="welcome">
         <div id="bar">
-            <div id="logo" style="text-align: left;">
+            <div class="logo" style="text-align: left;" onclick="goToTop()">
                 <span class="serif" style="font-size: 2vmax;color: crimson;">
                     RHYTHM
                 </span>
                 <br>
-                <span class="sans" style="font-size: 1.6vmax;letter-spacing: -1px;">
+                <span class="sans" style="font-size: 1.6vmax;letter-spacing: -0.1vmax;">
                     Life Sciences
                 </span>
             </div>
-            <div id="hamburger" onclick="showMenu()">
+            <div class="hamburger" onclick="showMenu(1)">
                 <i class="fa-solid fa-bars"></i>
             </div>
-            <div class="menuBar noMobile">Menu 1</div>
-            <div class="menuBar noMobile">Menu 2</div>
-            <div class="menuBar noMobile">Menu 3</div>
+            <div class="menuBar noMobile">about us</div>
+            <div class="menuBar noMobile">key areas</div>
+            <div class="menuBar noMobile">contact us</div>
+            <div class="menuMobile">        
+            </div>
         </div>
 
+        <div id="slideShow">
+
+        </div>
+
+   </div>
+   <div style="height: 100vh;background-color: tan;">
+    content
     </div>
+
 
 <script>
 
-function showMenu(){
+var menu = ['about us','key areas','contact us']
+
+//onscroll -- add shadow to the menubar
+window.onscroll = function(){scrollEffect()}
+
+function scrollEffect(){
+    var bar = document.getElementById('bar')
+    var barScroll = document.getElementById('barOnScroll')
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        bar.style.display = 'none'
+        barScroll.style.display = 'flex'
+  } else {
+        bar.style.display = 'flex'
+        barScroll.style.display = 'none'
+  }
+}
+
+function goToTop(){
+    document.body.scrollIntoView({ behavior: "smooth", block: "start"});
+}
+
+function showMenu(id){
+    alert(id)
+    var menu = document.getElementsByClassName('menuMobile')    
+    menu[id].style.display = 'flex'
+    const newDiv = document.createElement('div')
     
 }
 
